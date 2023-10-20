@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">RP_Project_Frontend</string>
+
+    <string name="loginPassword" />
+
+    <string-array name="class_array">
+        <item>1st Class</item>
+        <item>2nd Class</item>
+        <item>3rd Class</item>
+    </string-array>
+</resources>
