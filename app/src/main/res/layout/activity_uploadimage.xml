@@ -29,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
 
-        android:layout_marginTop="600dp"
+        android:layout_marginTop="500dp"
         android:text="CONFIRM"
         android:textColor="@color/white"
         android:layout_marginLeft="20dp"
@@ -44,7 +44,7 @@
         android:id="@+id/cancelBtn"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginTop="700dp"
+        android:layout_marginTop="600dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:text="CANCEL"
