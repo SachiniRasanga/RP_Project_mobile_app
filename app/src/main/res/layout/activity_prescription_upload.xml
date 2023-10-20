@@ -39,7 +39,17 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp" />
 
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:text="Please Upload your Prescription"
+    android:layout_marginTop="320dp"
+    android:textSize="20dp"
+    android:textStyle="bold"
 
+    android:layout_marginLeft="50dp"
+
+    android:textColor="@color/black"/>
     <androidx.cardview.widget.CardView
         android:layout_width="150dp"
         android:layout_height="150dp"
@@ -55,11 +65,11 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="80dp"
+                android:layout_width="100dp"
                 android:layout_marginTop="20dp"
-                android:layout_height="80dp"
+                android:layout_height="100dp"
                 android:layout_gravity="center"
-                android:background="@drawable/baseline_add_home_24" />
+                android:background="@drawable/camera" />
 
             <TextView
                 android:layout_width="wrap_content"
