@@ -25,37 +25,38 @@
 
         android:background="@drawable/background_view1"
 
-        tools:ignore="InvalidId"/>
+        tools:ignore="InvalidId" />
 
     <TextView
         android:id="@+id/textViewTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Prescription Reading"
-        android:textStyle="bold"
-
-        android:textSize="28sp"
-        android:textColor="#F6F2F2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp" />
+        android:layout_marginTop="60dp"
 
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:text="Please Upload your Prescription"
-    android:layout_marginTop="320dp"
-    android:textSize="20dp"
-    android:textStyle="bold"
+        android:text="Prescription Reading"
+        android:textColor="#F6F2F2"
+        android:textSize="28sp"
+        android:textStyle="bold" />
 
-    android:layout_marginLeft="50dp"
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="320dp"
+        android:text="Please Upload your Prescription"
+        android:textColor="@color/black"
 
-    android:textColor="@color/black"/>
+        android:textSize="20dp"
+
+        android:textStyle="bold" />
+
     <androidx.cardview.widget.CardView
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:layout_marginLeft="130dp"
         android:layout_marginTop="400dp"
-        app:cardCornerRadius="40dp"
-        android:layout_marginLeft="130dp">
+        app:cardCornerRadius="40dp">
 
 
         <LinearLayout
@@ -66,9 +67,9 @@
 
             <ImageView
                 android:layout_width="100dp"
-                android:layout_marginTop="20dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/camera" />
 
             <TextView

@@ -97,7 +97,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:text="Register"
-                    android:textColorLink="@color/my_secondary"/>
+                    android:textColorLink="@color/my_secondary" />
             </RelativeLayout>
 
             <View
@@ -108,11 +108,11 @@
                 android:id="@+id/loginBtn"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="LOGIN"
-                android:textColor="@color/white"
-
-                android:textSize="18dp"
                 android:background="@drawable/button_selector"
+                android:text="LOGIN"
+
+                android:textColor="@color/white"
+                android:textSize="18dp"
                 app:cornerRadius="32dp">
 
             </com.google.android.material.button.MaterialButton>

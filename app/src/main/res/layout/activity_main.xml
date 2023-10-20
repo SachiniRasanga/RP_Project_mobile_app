@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:alpha="0.8"
-        android:background="@color/my_primary" >
+        android:background="@color/my_primary">
 
         <ImageView
             android:id="@+id/imageView"
@@ -44,7 +44,6 @@
             android:layout_marginBottom="2dp"
             android:background="@color/my_secondary2" />
 
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -54,12 +53,9 @@
             android:layout_marginStart="83dp"
             android:layout_marginBottom="249dp"
             android:text="WELCOME TO AYUSHA"
-           android:textFontWeight="@android:integer/config_longAnimTime"
             android:textColor="@color/black"
-            android:textSize="25dp"
-
-
-            />
+            android:textFontWeight="@android:integer/config_longAnimTime"
+            android:textSize="25dp" />
 
         <TextView
             android:id="@+id/textView"
@@ -98,12 +94,6 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
-
     </RelativeLayout>
-
-
-
-
-
 
 </RelativeLayout>

@@ -29,8 +29,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="UPLOAD IMAGE"
                 android:layout_marginBottom="10dp"
+                android:text="UPLOAD IMAGE"
                 android:textColor="@color/my_secondary"
                 android:textSize="23dp"
                 android:textStyle="bold" />
@@ -38,10 +38,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
                 android:text="Choose a Prescription"
                 android:textColor="@color/my_secondary4"
                 android:textSize="20dp"
+                android:textStyle="bold"
                 tools:ignore="TextSizeCheck" />
 
             <View
@@ -57,11 +57,11 @@
                 android:id="@+id/loginBtn"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="CHOOSE FROM GALLARY"
-                android:textColor="@color/white"
-
-                android:textSize="18dp"
                 android:background="@drawable/button_selector"
+                android:text="CHOOSE FROM GALLARY"
+
+                android:textColor="@color/white"
+                android:textSize="18dp"
                 app:cornerRadius="32dp">
 
             </com.google.android.material.button.MaterialButton>
@@ -71,11 +71,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="20dp"
-                android:text="CANCEL"
-                android:textColor="@color/white"
-
-                android:textSize="18dp"
                 android:background="@drawable/cancel_button_selector"
+                android:text="CANCEL"
+
+                android:textColor="@color/white"
+                android:textSize="18dp"
                 app:cornerRadius="32dp">
 
             </com.google.android.material.button.MaterialButton>
