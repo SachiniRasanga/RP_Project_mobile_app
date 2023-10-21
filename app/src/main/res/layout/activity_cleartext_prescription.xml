@@ -48,8 +48,66 @@
     <androidx.cardview.widget.CardView
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginLeft="165dp"
-        android:layout_marginTop="530dp"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="560dp"
+        app:cardCornerRadius="40dp">
+
+
+        <LinearLayout
+            android:layout_width="157dp"
+            android:layout_height="147dp"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/rotate"
+                tools:ignore="InvalidId" />
+
+
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="560dp"
+        app:cardCornerRadius="40dp">
+
+
+        <LinearLayout
+            android:layout_width="157dp"
+            android:layout_height="147dp"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/down"
+                tools:ignore="InvalidId" />
+
+
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="260dp"
+        android:layout_marginTop="560dp"
         app:cardCornerRadius="40dp">
 
 
@@ -66,7 +124,7 @@
                 android:layout_gravity="center"
                 android:padding="10dp"
                 android:layout_marginTop="50dp"
-                android:background="@drawable/rotate"
+                android:background="@drawable/sound"
                 tools:ignore="InvalidId" />
 
 
@@ -75,43 +133,7 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="match_parent"
->
 
-
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/confirm_button"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:text="CONFIRM"
-            android:textColor="@color/white"
-            android:layout_marginTop="620dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:textSize="18dp"
-            android:background="@drawable/button1"
-            app:cornerRadius="32dp">
-
-        </com.google.android.material.button.MaterialButton>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/cancel_button"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:text="CANCEL"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:textColor="@color/white"
-            android:layout_marginTop="700dp"
-            android:textSize="18dp"
-            android:background="@drawable/cancel_button_selector"
-            app:cornerRadius="32dp">
-
-        </com.google.android.material.button.MaterialButton>
-    </RelativeLayout>
 
 
 
