@@ -6,15 +6,15 @@ public class UserCreateRequest {
     private String email;
     private String password;
     private String mobileno;
-    private String userType;
+    private String usertype;
 
-    public UserCreateRequest(String fullname, String username, String email, String password, String mobileno, String userType) {
+    public UserCreateRequest(String fullname, String username, String email, String password, String mobileno, String usertype) {
         this.fullname = fullname;
         this.username = username;
         this.email = email;
         this.password = password;
         this.mobileno = mobileno;
-        this.userType = userType;
+        this.usertype = usertype;
     }
 
     public String getFullname() {
@@ -57,11 +57,11 @@ public class UserCreateRequest {
         this.mobileno = mobileno;
     }
 
-    public String getUserType() {
-        return userType;
+    public String getUsertype() {
+        return usertype;
     }
 
-    public void setUserType(String userType) {
-        this.userType = userType;
+    public void setUsertype(String usertype) {
+        this.usertype = usertype;
     }
 }

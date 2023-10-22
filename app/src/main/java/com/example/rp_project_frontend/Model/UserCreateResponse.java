@@ -4,7 +4,7 @@ import org.json.JSONObject;
 
 public class UserCreateResponse {
     private String message;
-    private JSONObject data;
+    private Object data;
 
     public UserCreateResponse(String message, JSONObject data) {
         this.message = message;
@@ -19,11 +19,11 @@ public class UserCreateResponse {
         this.message = message;
     }
 
-    public JSONObject getData() {
+    public Object getData() {
         return data;
     }
 
-    public void setData(JSONObject data) {
+    public void setData(Object data) {
         this.data = data;
     }
 }

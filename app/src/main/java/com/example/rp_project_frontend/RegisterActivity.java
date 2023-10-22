@@ -1,5 +1,6 @@
 package com.example.rp_project_frontend;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -40,6 +41,8 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void registerUser() {
+        Logger logger = Logger.getLogger("Register Activity");
+
         String firstName = firstNameEditText.getText().toString();
         String lastName = lastNameEditText.getText().toString();
         String username = userNameEditText.getText().toString();
@@ -71,8 +74,14 @@ public class RegisterActivity extends AppCompatActivity {
 
         String fullName = firstName + " " + lastName;
         UserCreateRequest userCreateRequest = new UserCreateRequest(
-            fullName, username,email,password,mobileNo,userType
+                fullName, username, email, password, mobileNo, userType
         );
+        logger.info("Full name  : " + userCreateRequest.getFullname());
+        logger.info("Username   : " + userCreateRequest.getUsername());
+        logger.info("email      : " + userCreateRequest.getEmail());
+        logger.info("User type  : " + userCreateRequest.getUsertype());
+        logger.info("Mobile No  : " + userCreateRequest.getMobileno());
+        logger.info("Password   : " + userCreateRequest.getPassword());
 
         Call<UserCreateResponse> call = RetrofitClient
                 .getInstance()
@@ -83,12 +92,12 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<UserCreateResponse> call, Response<UserCreateResponse> response) {
                 UserCreateResponse userCreateResponse = response.body();
-                Logger logger = Logger.getLogger("Register Activity");
-                logger.info(userCreateResponse.getMessage());
                 if (response.isSuccessful()) {
-                    logger.info("Register successful");
                     logger.info(userCreateResponse.getMessage());
                     Toast.makeText(RegisterActivity.this, userCreateResponse.getMessage(), Toast.LENGTH_LONG).show();
+
+                    Intent registerIntent = new Intent(RegisterActivity.this, LoginActivity.class);
+                    startActivity(registerIntent);
                 } else {
                     Toast.makeText(RegisterActivity.this, userCreateResponse.getMessage(), Toast.LENGTH_LONG).show();
                 }

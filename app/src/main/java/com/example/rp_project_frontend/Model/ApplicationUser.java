@@ -8,16 +8,17 @@ public class ApplicationUser {
     private String email;
     private String password;
     private String mobileno;
-    private String userType;
+    private String usertype;
+
     private Date createdAt;
 
-    public ApplicationUser(String fullname, String username, String email, String password, String mobileno, String userType, Date createdAt) {
+    public ApplicationUser(String fullname, String username, String email, String password, String mobileno, String usertype, Date createdAt) {
         this.fullname = fullname;
         this.username = username;
         this.email = email;
         this.password = password;
         this.mobileno = mobileno;
-        this.userType = userType;
+        this.usertype = usertype;
         this.createdAt = createdAt;
     }
 
@@ -61,19 +62,19 @@ public class ApplicationUser {
         this.mobileno = mobileno;
     }
 
-    public String getUserType() {
-        return userType;
-    }
-
-    public void setUserType(String userType) {
-        this.userType = userType;
-    }
-
     public Date getCreatedAt() {
         return createdAt;
     }
 
     public void setCreatedAt(Date createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public String getUsertype() {
+        return usertype;
+    }
+
+    public void setUsertype(String usertype) {
+        this.usertype = usertype;
     }
 }
