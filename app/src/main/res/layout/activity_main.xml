@@ -10,91 +10,85 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:alpha="0.8"
         android:background="@color/my_primary">
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
+            android:layout_width="220dp"
+            android:layout_height="280dp"
+            android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="149dp"
-            android:layout_marginEnd="51dp"
+            android:layout_marginStart="57dp"
+            android:layout_marginTop="43dp"
+            android:layout_marginEnd="57dp"
             android:background="@drawable/roundedcorner_image"
-            android:padding="45dp"
+            android:padding="20dp"
             android:src="@drawable/get" />
 
         <ImageView
             android:layout_width="417dp"
-            android:layout_height="63dp"
+            android:layout_height="89dp"
+            android:layout_below="@+id/imageView"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="-6dp"
-            android:layout_marginBottom="288dp"
+            android:layout_marginTop="29dp"
+
+            android:layout_marginBottom="360dp"
             android:background="@drawable/new2" />
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="287dp"
+            android:layout_height="361dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="0dp"
-            android:layout_marginBottom="2dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
             android:background="@color/my_secondary2" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="314dp"
+            android:layout_height="85dp"
+            android:layout_alignTop="@+id/topic"
             android:layout_alignParentStart="true"
-
+            android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="83dp"
-            android:layout_marginBottom="249dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="61dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="263dp"
             android:text="WELCOME TO AYUSHA"
             android:textColor="@color/black"
-            android:textFontWeight="@android:integer/config_longAnimTime"
-            android:textSize="25dp" />
+            android:textFontWeight="@integer/material_motion_duration_long_1"
+            android:textSize="25dp"
+            tools:ignore="UnknownId" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="256dp"
-            android:layout_height="57dp"
-
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="93dp"
-            android:layout_marginBottom="176dp"
-            android:text="Ayusha is a Traditional medicine development App.Ayusha is a Traditional medicine development App.Ayusha is a Traditional medicine development App."
-            android:textColor="@color/black"
-
-            android:textSize="15dp" />
 
         <Button
             android:id="@+id/getStartedButton"
+
             android:layout_width="wrap_content"
-            android:layout_height="65dp"
+            android:layout_height="127dp"
             android:layout_below="@+id/imageView"
             android:layout_alignParentStart="true"
+
             android:layout_alignParentEnd="true"
-
             android:layout_alignParentBottom="true"
-            android:layout_gravity="center"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="225dp"
-            android:layout_marginEnd="50dp"
-            android:layout_marginBottom="84dp"
-            android:background="@color/my_secondary1"
-            android:gravity="center"
-            android:paddingStart="30dp"
-            android:paddingTop="15dp"
+            android:layout_marginStart="57dp"
+            android:layout_marginTop="265dp"
+            android:layout_marginEnd="43dp"
+            android:layout_marginBottom="130dp"
 
-            android:paddingEnd="30dp"
-            android:paddingBottom="15dp"
+
+            android:background="@drawable/button_selector"
+            android:gravity="center"
             android:text="GET STARTED"
             android:textColor="#fff"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
     </RelativeLayout>
