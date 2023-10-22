@@ -40,16 +40,16 @@ public class LoginActivity extends AppCompatActivity {
 
         loginBtn.setOnClickListener(view -> loginUser());
 
-        registerTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent registerIntent = new Intent(LoginActivity.this, RegisterActivity.class);
-                startActivity(registerIntent);
-            }
+        registerTextView.setOnClickListener(view -> {
+            Intent registerIntent = new Intent(LoginActivity.this, RegisterActivity.class);
+            startActivity(registerIntent);
         });
     }
 
     private void loginUser() {
+
+        Logger logger = Logger.getLogger("Login Activity");
+        logger.info("Start login user method");
 
         String username = userNameEditText.getText().toString();
         String password = passwordEditText.getText().toString();
@@ -62,11 +62,15 @@ public class LoginActivity extends AppCompatActivity {
             passwordEditText.requestFocus();
             passwordEditText.setError("password cannot be empty");
         }
+        logger.info("Validations done");
 
         UserLoginRequest userLoginRequest = new UserLoginRequest(
                 username, password
         );
 
+        logger.info("Set username and password to request");
+
+        logger.info("Call to API");
         Call<UserLoginResponse> call = RetrofitClient
                 .getInstance()
                 .getEndpoint()

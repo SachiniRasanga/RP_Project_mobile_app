@@ -5,7 +5,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.activity.result.ActivityResult;
@@ -16,40 +15,38 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class PrescriptionUploadActivity extends AppCompatActivity {
 
-  Button button;
-  ImageView image;
+    ImageView uploadImageBtn, uploadImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prescription_upload);
 
+        uploadImageBtn = findViewById(R.id.uploadImageBtn);
 
-        button = findViewById(R.id.button);
-
-        button.setOnClickListener(new View.OnClickListener() {
+        uploadImageBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-           openGallery();
+                openGallery();
             }
         });
     }
-    public void openGallery(){
+
+    public void openGallery() {
         Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         openGallery.launch(intent);
     }
 
+    ActivityResultLauncher<Intent> openGallery = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
+            new ActivityResultCallback<ActivityResult>() {
 
-   ActivityResultLauncher<Intent> openGallery = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
-           new ActivityResultCallback<ActivityResult>(){
+                @Override
+                public void onActivityResult(ActivityResult result) {
 
-   @Override
-       public void onActivityResult(ActivityResult result){
+                    Uri uriImage = result.getData().getData();
+                    uploadImageView.setImageURI(uriImage);
+                }
 
-       Uri uriImage = result.getData().getData();
-       image.setImageURI(uriImage);
-   }
-
-   });
+            });
 
 }
