@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:alpha="0.8"
-        android:background="@color/my_primary" >
+        android:background="@color/my_primary">
 
         <ImageView
             android:id="@+id/imageView"
@@ -44,7 +44,6 @@
             android:layout_marginBottom="2dp"
             android:background="@color/my_secondary2" />
 
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -54,22 +53,19 @@
             android:layout_marginStart="83dp"
             android:layout_marginBottom="249dp"
             android:text="WELCOME TO AYUSHA"
-           android:textFontWeight="@android:integer/config_longAnimTime"
             android:textColor="@color/black"
-            android:textSize="25dp"
-
-
-            />
+            android:textFontWeight="@android:integer/config_longAnimTime"
+            android:textSize="25dp" />
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="243dp"
-            android:layout_height="121dp"
+            android:layout_width="256dp"
+            android:layout_height="57dp"
 
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="93dp"
-            android:layout_marginBottom="94dp"
+            android:layout_marginBottom="176dp"
             android:text="Ayusha is a Traditional medicine development App.Ayusha is a Traditional medicine development App.Ayusha is a Traditional medicine development App."
             android:textColor="@color/black"
 
@@ -77,33 +73,30 @@
 
         <Button
             android:id="@+id/getStartedButton"
-            android:layout_width="282dp"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
             android:layout_below="@+id/imageView"
             android:layout_alignParentStart="true"
-            android:layout_gravity="center"
+            android:layout_alignParentEnd="true"
 
-            android:layout_marginStart="73dp"
-            android:layout_marginTop="299dp"
-            android:layout_marginBottom="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="225dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="84dp"
             android:background="@color/my_secondary1"
             android:gravity="center"
             android:paddingStart="30dp"
             android:paddingTop="15dp"
+
             android:paddingEnd="30dp"
             android:paddingBottom="15dp"
             android:text="GET STARTED"
-
             android:textColor="#fff"
             android:textSize="18sp"
             android:textStyle="bold" />
 
-
     </RelativeLayout>
-
-
-
-
-
 
 </RelativeLayout>
