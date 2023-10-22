@@ -43,12 +43,6 @@ public class PopupActivity extends AppCompatActivity {
         openGallery.launch(intent);
     }
 
-//    ActivityResultLauncher<Intent> openGallery = registerForActivityResult(
-//            new ActivityResultContracts.StartActivityForResult(), result -> {
-//                Uri uriImage = result.getData().getData();
-//                uploadImageView.setImageURI(uriImage);
-//            });
-
     ActivityResultLauncher<Intent> openGallery = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(), result -> {
                 Uri uriImage = result.getData().getData();
