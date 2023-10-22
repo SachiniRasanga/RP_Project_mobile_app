@@ -1,11 +1,18 @@
 package com.example.rp_project_frontend;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.text.Layout;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
@@ -15,7 +22,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class PrescriptionUploadActivity extends AppCompatActivity {
 
-    ImageView uploadImageBtn, uploadImageView;
+    ImageView uploadImageBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,29 +31,11 @@ public class PrescriptionUploadActivity extends AppCompatActivity {
 
         uploadImageBtn = findViewById(R.id.uploadImageBtn);
 
-        uploadImageBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openGallery();
-            }
+        uploadImageBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(PrescriptionUploadActivity.this, PopupActivity.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.bottom_to_top, R.anim.no_animation);
         });
     }
-
-    public void openGallery() {
-        Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-        openGallery.launch(intent);
-    }
-
-    ActivityResultLauncher<Intent> openGallery = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
-            new ActivityResultCallback<ActivityResult>() {
-
-                @Override
-                public void onActivityResult(ActivityResult result) {
-
-                    Uri uriImage = result.getData().getData();
-                    uploadImageView.setImageURI(uriImage);
-                }
-
-            });
 
 }
