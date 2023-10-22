@@ -10,8 +10,9 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_alignTop="@+id/textViewTitle"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
+        android:layout_marginTop="-60dp"
         android:alpha="0.6"
         android:background="@color/my_primary">
 
@@ -22,32 +23,37 @@
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="160dp"
-
         android:background="@drawable/background_view1"
-
         tools:ignore="InvalidId" />
 
     <TextView
         android:id="@+id/textViewTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/view"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp"
+        android:layout_marginBottom="63dp"
         android:text="Prescription Reading"
         android:textColor="#F6F2F2"
         android:textSize="28sp"
         android:textStyle="bold" />
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="320dp"
+        android:layout_width="311dp"
+        android:layout_height="67dp"
+        android:layout_below="@+id/view"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="466dp"
         android:text="Please Upload your Prescription"
         android:textColor="@color/black"
-
         android:textSize="20dp"
-
         android:textStyle="bold" />
 
     <androidx.cardview.widget.CardView

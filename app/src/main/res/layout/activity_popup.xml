@@ -59,7 +59,6 @@
                 android:layout_height="60dp"
                 android:background="@drawable/button_selector"
                 android:text="CHOOSE FROM GALLARY"
-
                 android:textColor="@color/white"
                 android:textSize="18dp"
                 app:cornerRadius="32dp">
@@ -73,7 +72,6 @@
                 android:layout_marginTop="20dp"
                 android:background="@drawable/cancel_button_selector"
                 android:text="CANCEL"
-
                 android:textColor="@color/white"
                 android:textSize="18dp"
                 app:cornerRadius="32dp">
@@ -85,9 +83,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="10dp" />
 
-
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-
 
 </RelativeLayout>
