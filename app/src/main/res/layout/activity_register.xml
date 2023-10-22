@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:text="REGISTER"
                 android:textColor="@color/my_primary"
-                android:textSize="32sp"
+                android:textSize="25dp"
                 android:textStyle="bold" />
 
             <TextView
@@ -51,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:alpha="0.8"
                 android:text="First Name"
-                android:textSize="20dp"
+                android:textSize="18dp"
                 android:textStyle="bold" />
 
             <EditText
@@ -65,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:alpha="0.8"
                 android:text="Last Name"
-                android:textSize="20dp"
+                android:textSize="18dp"
                 android:textStyle="bold" />
 
             <EditText
@@ -79,7 +79,7 @@
                 android:layout_height="wrap_content"
                 android:alpha="0.8"
                 android:text="User Name"
-                android:textSize="20dp"
+                android:textSize="18dp"
                 android:textStyle="bold" />
 
             <EditText
@@ -93,7 +93,7 @@
                 android:layout_height="wrap_content"
                 android:alpha="0.8"
                 android:text="Mobile Number"
-                android:textSize="20dp"
+                android:textSize="18dp"
                 android:textStyle="bold" />
 
             <EditText
@@ -102,26 +102,13 @@
                 android:layout_height="wrap_content"
                 android:inputType="number" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:alpha="0.8"
-                android:text="NIC Number"
-                android:textSize="20dp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/NIC"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:alpha="0.8"
                 android:text="Email"
-                android:textSize="20dp"
+                android:textSize="18dp"
                 android:textStyle="bold" />
 
             <EditText
@@ -136,7 +123,7 @@
                 android:layout_height="wrap_content"
                 android:alpha="0.8"
                 android:text="Password"
-                android:textSize="20dp"
+                android:textSize="18dp"
                 android:textStyle="bold" />
 
             <EditText
@@ -151,7 +138,7 @@
                 android:layout_height="wrap_content"
                 android:alpha="0.8"
                 android:text="User Type"
-                android:textSize="20dp"
+                android:textSize="18dp"
                 android:textStyle="bold" />
 
             <EditText
@@ -170,6 +157,10 @@
                 android:layout_height="60dp"
                 android:background="@drawable/button_selector"
                 android:text="REGISTER"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
                 android:textColor="@color/white"
                 android:textSize="18dp"
                 app:cornerRadius="32dp">
