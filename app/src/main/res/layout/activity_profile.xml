@@ -13,67 +13,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:alpha="0.6"
-        android:background="@color/my_primary">
-
-
-        <EditText
-            android:id="@+id/profile_fullname_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="291dp"
-            android:layout_marginEnd="41dp"
-            android:layout_marginBottom="487dp"
-            android:ems="10"
-            android:inputType="text"
-            android:text="Name" />
-
-        <EditText
-            android:id="@+id/profile_email_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="351dp"
-            android:layout_marginEnd="44dp"
-            android:layout_marginBottom="427dp"
-            android:ems="10"
-            android:inputType="text"
-            android:text="Name" />
-
-        <EditText
-            android:id="@+id/profile_mobilenumber_text"
-            android:layout_width="171dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="409dp"
-            android:layout_marginEnd="37dp"
-            android:layout_marginBottom="369dp"
-            android:ems="10"
-            android:inputType="text"
-            android:text="Name" />
-
-        <EditText
-            android:id="@+id/profile_usertype_text"
-            android:layout_width="181dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="477dp"
-            android:layout_marginEnd="67dp"
-            android:layout_marginBottom="301dp"
-            android:ems="10"
-            android:inputType="text"
-            android:text="Name" />
-
-
-    </RelativeLayout>
+        android:background="@color/my_primary"/>
 
     <View
         android:id="@+id/view"
@@ -102,7 +42,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/image"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="300dp"
         android:layout_below="@+id/view"
         app:cardCornerRadius="65dp"
         android:layout_alignParentStart="true"
@@ -111,76 +51,141 @@
         android:layout_marginStart="35dp"
         android:layout_marginLeft="35dp"
         android:layout_marginTop="123dp"
-        android:layout_marginEnd="26dp"
+        android:layout_marginEnd="35dp"
         android:layout_marginRight="35dp"
-        android:layout_marginBottom="220dp"
+        android:layout_marginBottom="250dp"
         android:background="@color/my_secondary2"
-        android:padding="40dp">
-
+        android:padding="10dp"
+        tools:ignore="UnknownIdInLayout">
 
         <TextView
-            android:layout_width="149dp"
+            android:layout_width="214dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="70dp"
+            android:layout_marginLeft="85dp"
             android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
             android:text="User Details"
             android:textColor="@color/black"
-            android:textSize="25dp"
-            android:textStyle="bold">
-
-        </TextView>
-
-
-        <TextView
-            android:id="@+id/profile_fullname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="80dp"
-            android:text="Full Name:"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            android:textStyle="bold">
-
-
-        </TextView>
-
-
-        <TextView
-            android:id="@+id/profile_email"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="140dp"
-            android:text="Email:"
-            android:textColor="@color/black"
-            android:textSize="20dp"
+            android:textSize="30dp"
             android:textStyle="bold"></TextView>
 
-        <TextView
-            android:id="@+id/profile_mobilenumber"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="200dp"
-            android:text="Mobile Number:"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            android:textStyle="bold"></TextView>
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="100dp">
+            <TextView
+                android:id="@+id/profile_fullname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Full Name:  "
 
+                android:textColor="@color/black"
+                android:textSize="22dp"
+                android:textStyle="bold">
+            </TextView>
+            <TextView
+                android:id="@+id/profile_fullname_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sachini Rasanga"
+                android:textFontWeight="@integer/material_motion_duration_long_1"
+                android:textColor="@color/my_secondary4"
+                android:textSize="22dp">
+            </TextView>
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/profile_usertype"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="260dp"
-            android:text="UserType:"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            android:textStyle="bold"></TextView>
+            android:orientation="horizontal"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="150dp">
+            <TextView
+                android:id="@+id/profile_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email:  "
+                android:textColor="@color/black"
+                android:textSize="22dp"
+                android:textStyle="bold">
+            </TextView>
+            <TextView
+                android:id="@+id/profile_email_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sachinirasanga98 gmail.com "
+                android:textFontWeight="@integer/material_motion_duration_long_1"
+                android:textColor="@color/my_secondary4"
+                android:textSize="22dp"
+                tools:ignore="DuplicateIds">
+            </TextView>
+        </LinearLayout>
 
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="230dp">
+            <TextView
+                android:id="@+id/profile_mobilenumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mobile No: "
+                android:textColor="@color/black"
+                android:textSize="22dp"
+                android:textStyle="bold">
+            </TextView>
+            <TextView
+                android:id="@+id/profile_mobilenumber_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0711992026"
+                android:textFontWeight="@integer/material_motion_duration_long_1"
+                android:textColor="@color/my_secondary4"
+                android:textSize="22dp">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="280dp">
+            <TextView
+                android:id="@+id/profile_usertype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Type: "
+                android:textColor="@color/black"
+                android:textSize="22dp"
+                android:textStyle="bold">
+            </TextView>
+            <TextView
+                android:id="@+id/profile_usertype_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Patient"
+                android:textFontWeight="@integer/material_motion_duration_long_1"
+                android:textColor="@color/my_secondary4"
+                android:textSize="22dp"
+                tools:ignore="DuplicateIds">
+            </TextView>
+        </LinearLayout>
+
+
+        <!-- Repeat the above LinearLayout structure for other details (email, mobile number, usertype) -->
 
     </androidx.cardview.widget.CardView>
+
+
 
 </RelativeLayout>
