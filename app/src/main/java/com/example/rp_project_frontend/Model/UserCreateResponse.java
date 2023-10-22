@@ -1,12 +1,14 @@
 package com.example.rp_project_frontend.Model;
 
+import org.json.JSONObject;
+
 public class UserCreateResponse {
     private String message;
-    private boolean success;
+    private JSONObject data;
 
-    public UserCreateResponse(String message, boolean success) {
+    public UserCreateResponse(String message, JSONObject data) {
         this.message = message;
-        this.success = success;
+        this.data = data;
     }
 
     public String getMessage() {
@@ -17,11 +19,11 @@ public class UserCreateResponse {
         this.message = message;
     }
 
-    public boolean isSuccess() {
-        return success;
+    public JSONObject getData() {
+        return data;
     }
 
-    public void setSuccess(boolean success) {
-        this.success = success;
+    public void setData(JSONObject data) {
+        this.data = data;
     }
 }

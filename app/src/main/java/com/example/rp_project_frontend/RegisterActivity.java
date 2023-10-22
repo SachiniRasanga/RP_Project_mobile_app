@@ -19,7 +19,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class RegisterActivity extends AppCompatActivity {
-    EditText firstNameEditText, lastNameEditText, userNameEditText, emailEditText, mobileNoEditText, passwordEditText, nicEditText;
+    EditText firstNameEditText, lastNameEditText, userNameEditText, emailEditText, mobileNoEditText, passwordEditText, userTypeEditText;
     Button registerBtn;
 
     @Override
@@ -33,7 +33,7 @@ public class RegisterActivity extends AppCompatActivity {
         emailEditText = findViewById(R.id.email);
         mobileNoEditText = findViewById(R.id.mobileNo);
         passwordEditText = findViewById(R.id.password);
-        nicEditText = findViewById(R.id.NIC);
+        userTypeEditText = findViewById(R.id.userType);
         registerBtn = findViewById(R.id.registerBtn);
 
         registerBtn.setOnClickListener(view -> registerUser());
@@ -46,20 +46,11 @@ public class RegisterActivity extends AppCompatActivity {
         String email = emailEditText.getText().toString();
         String mobileNo = mobileNoEditText.getText().toString();
         String password = passwordEditText.getText().toString();
-        String nic = nicEditText.getText().toString();
-        String gender = "M";
-        int age = 0;
-        String imageRef = "";
-        String description = "";
-        int roleId = 2;
+        String userType = userTypeEditText.getText().toString();
 
         if (username.isEmpty()) {
             userNameEditText.requestFocus();
             userNameEditText.setError("username cannot be empty");
-        }
-        if (nic.isEmpty()) {
-            nicEditText.requestFocus();
-            nicEditText.setError("NIC cannot be empty");
         }
         if (firstName.isEmpty()) {
             firstNameEditText.requestFocus();
@@ -78,8 +69,9 @@ public class RegisterActivity extends AppCompatActivity {
             emailEditText.setError("Email cannot be empty");
         }
 
+        String fullName = firstName + " " + lastName;
         UserCreateRequest userCreateRequest = new UserCreateRequest(
-                firstName, lastName, username, email, mobileNo, password, nic, gender, age, imageRef, description, roleId
+            fullName, username,email,password,mobileNo,userType
         );
 
         Call<UserCreateResponse> call = RetrofitClient

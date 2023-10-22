@@ -1,51 +1,28 @@
 package com.example.rp_project_frontend.Model;
 
 public class UserCreateRequest {
-    public String firstName;
-    public String lastName;
-    public String username;
-    public String email;
-    public String mobileNo;
-    public String password;
-    public String nic;
-    public String gender;
-    public int age;
-    public String imageRef;
-    public String description;
-    public int roleId;
+    private String fullname;
+    private String username;
+    private String email;
+    private String password;
+    private String mobileno;
+    private String userType;
 
-    public UserCreateRequest(String firstName, String lastName, String username, String email, String mobileNo, String password, String nic, String gender, int age, String imageRef, String description, int roleId) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public UserCreateRequest(String fullname, String username, String email, String password, String mobileno, String userType) {
+        this.fullname = fullname;
         this.username = username;
         this.email = email;
-        this.mobileNo = mobileNo;
         this.password = password;
-        this.nic = nic;
-        this.gender = gender;
-        this.age = age;
-        this.imageRef = imageRef;
-        this.description = description;
-        this.roleId = roleId;
+        this.mobileno = mobileno;
+        this.userType = userType;
     }
 
-    public UserCreateRequest() {
+    public String getFullname() {
+        return fullname;
     }
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
     }
 
     public String getUsername() {
@@ -64,14 +41,6 @@ public class UserCreateRequest {
         this.email = email;
     }
 
-    public String getMobileNo() {
-        return mobileNo;
-    }
-
-    public void setMobileNo(String mobileNo) {
-        this.mobileNo = mobileNo;
-    }
-
     public String getPassword() {
         return password;
     }
@@ -80,51 +49,19 @@ public class UserCreateRequest {
         this.password = password;
     }
 
-    public String getNic() {
-        return nic;
+    public String getMobileno() {
+        return mobileno;
     }
 
-    public void setNic(String nic) {
-        this.nic = nic;
+    public void setMobileno(String mobileno) {
+        this.mobileno = mobileno;
     }
 
-    public String getGender() {
-        return gender;
+    public String getUserType() {
+        return userType;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getImageRef() {
-        return imageRef;
-    }
-
-    public void setImageRef(String imageRef) {
-        this.imageRef = imageRef;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public int getRoleId() {
-        return roleId;
-    }
-
-    public void setRoleId(int roleId) {
-        this.roleId = roleId;
+    public void setUserType(String userType) {
+        this.userType = userType;
     }
 }

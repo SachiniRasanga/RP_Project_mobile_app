@@ -4,8 +4,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -24,6 +26,7 @@ import retrofit2.Response;
 public class LoginActivity extends AppCompatActivity {
     EditText userNameEditText, passwordEditText;
     Button loginBtn;
+    TextView registerTextView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -33,8 +36,17 @@ public class LoginActivity extends AppCompatActivity {
         userNameEditText = findViewById(R.id.loginUsername);
         passwordEditText = findViewById(R.id.loginPassword);
         loginBtn = findViewById(R.id.loginBtn);
+        registerTextView = findViewById(R.id.registerBtn);
 
         loginBtn.setOnClickListener(view -> loginUser());
+
+        registerTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent registerIntent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(registerIntent);
+            }
+        });
     }
 
     private void loginUser() {
@@ -67,14 +79,13 @@ public class LoginActivity extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     Logger logger = Logger.getLogger("Login Activity");
                     logger.info("Login request success");
-                    logger.info("UserId  : " + userLoginResponse.getUserId());
-                    logger.info("Email   : " + userLoginResponse.getEmail());
+                    logger.info("UserId  : " + userLoginResponse.getUserid());
                     logger.info("Message : " + userLoginResponse.getMessage());
-                    logger.info("Success : " + userLoginResponse.getSuccess());
+                    logger.info("User type    : " + userLoginResponse.getUsertype());
 
                     SharedPreferences sharedPreferences = getSharedPreferences("user_details", Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = sharedPreferences.edit();
-                    String userId = userLoginResponse.getUserId();
+                    String userId = userLoginResponse.getUserid();
                     editor.putString("userId", userId);
                     editor.apply();
 

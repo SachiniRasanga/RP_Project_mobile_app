@@ -1,20 +1,20 @@
 package com.example.rp_project_frontend.Model;
 
 public class UserLoginRequest {
-    private String userName;
+    private String username;
     private String password;
 
-    public UserLoginRequest(String userName, String password) {
-        this.userName = userName;
+    public UserLoginRequest(String username, String password) {
+        this.username = username;
         this.password = password;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
