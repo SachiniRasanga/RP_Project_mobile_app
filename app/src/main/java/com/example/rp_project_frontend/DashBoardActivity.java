@@ -36,32 +36,35 @@ public class DashBoardActivity extends AppCompatActivity {
             }
         });
 
-        logoutDashboardBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        logoutDashboardBtn.setOnClickListener(view -> {
 
-                AlertDialog.Builder builder = new AlertDialog.Builder(DashBoardActivity.this);
-                builder.setCancelable(true);
-                builder.setTitle("Logout");
-                builder.setMessage("Do you want to logout ?");
-                builder.setPositiveButton("Yes", (dialogInterface, i) -> {
+            AlertDialog.Builder builder = new AlertDialog.Builder(DashBoardActivity.this);
+            builder.setCancelable(true);
+            builder.setTitle("Logout");
+            builder.setMessage("Do you want to logout ?");
+            builder.setPositiveButton("Yes", (dialogInterface, i) -> {
 
-                    SharedPreferences sharedPreferences = getSharedPreferences("user_details", Context.MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sharedPreferences.edit();
-                    editor.remove("userId");
-                    editor.commit();
-                    finish();
+                SharedPreferences sharedPreferences = getSharedPreferences("user_details", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.remove("userId");
+                editor.commit();
+                finish();
 
-                    Toast.makeText(DashBoardActivity.this,"Logout successfully",Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(DashBoardActivity.this, LoginActivity.class);
-                    startActivity(intent);
-                });
+                Toast.makeText(DashBoardActivity.this, "Logout successfully", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(DashBoardActivity.this, LoginActivity.class);
+                startActivity(intent);
+            });
 
-                builder.setNegativeButton("No", (dialogInterface, i) -> {});
+            builder.setNegativeButton("No", (dialogInterface, i) -> {
+            });
 
-                AlertDialog dialog = builder.create();
-                dialog.show();
-            }
+            AlertDialog dialog = builder.create();
+            dialog.show();
+        });
+
+        prescriptionReadDashboardBtn.setOnClickListener(view -> {
+            Intent prescriptionReadIntent = new Intent(DashBoardActivity.this, PrescriptionUploadActivity.class);
+            startActivity(prescriptionReadIntent);
         });
     }
 }

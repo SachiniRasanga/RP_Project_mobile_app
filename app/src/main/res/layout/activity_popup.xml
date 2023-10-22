@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".LoginActivity">
+    tools:context=".LoginActivity"
+    android:id="@+id/activity_popup">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -54,7 +55,7 @@
                 android:layout_height="10dp" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/loginBtn"
+                android:id="@+id/chooseFromGalleryBtn"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:background="@drawable/button_selector"

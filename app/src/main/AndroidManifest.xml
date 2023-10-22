@@ -36,6 +36,18 @@
             android:exported="true" />
 
         <activity
+            android:name=".PrescriptionUploadActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".UploadImageActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".PopupActivity"
+            android:exported="true" />
+
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
