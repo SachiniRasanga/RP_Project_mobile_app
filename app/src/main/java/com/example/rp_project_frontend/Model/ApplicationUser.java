@@ -9,7 +9,6 @@ public class ApplicationUser {
     private String password;
     private String mobileno;
     private String usertype;
-
     private Date createdAt;
 
     public ApplicationUser(String fullname, String username, String email, String password, String mobileno, String usertype, Date createdAt) {
