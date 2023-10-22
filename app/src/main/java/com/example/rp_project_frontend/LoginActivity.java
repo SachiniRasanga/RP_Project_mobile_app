@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -81,27 +82,28 @@ public class LoginActivity extends AppCompatActivity {
             public void onResponse(Call<UserLoginResponse> call, Response<UserLoginResponse> response) {
                 UserLoginResponse userLoginResponse = response.body();
                 if (response.isSuccessful()) {
-                    Logger logger = Logger.getLogger("Login Activity");
-                    logger.info("Login request success");
-                    logger.info("UserId  : " + userLoginResponse.getUserid());
-                    logger.info("Message : " + userLoginResponse.getMessage());
-                    logger.info("User type    : " + userLoginResponse.getUsertype());
 
-                    SharedPreferences sharedPreferences = getSharedPreferences("user_details", Context.MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sharedPreferences.edit();
-                    String userId = userLoginResponse.getUserid();
-                    editor.putString("userId", userId);
-                    editor.apply();
+                    if (response.body().getUserid() != null) {
+                        Logger logger = Logger.getLogger("Login Activity");
+                        logger.info("Login request success");
+                        logger.info("UserId  : " + userLoginResponse.getUserid());
+                        logger.info("Message : " + userLoginResponse.getMessage());
+                        logger.info("User type    : " + userLoginResponse.getUsertype());
 
-                    Toast.makeText(LoginActivity.this, userLoginResponse.getMessage(), Toast.LENGTH_LONG).show();
+                        SharedPreferences sharedPreferences = getSharedPreferences("user_details", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        String userId = userLoginResponse.getUserid();
+                        editor.putString("userId", userId);
+                        editor.apply();
 
-                    Intent intent = new Intent(LoginActivity.this, DashBoardActivity.class);
-                    intent.putExtra("userId", userId);
-                    startActivity(intent);
-                    finish();
+                        Toast.makeText(LoginActivity.this, userLoginResponse.getMessage(), Toast.LENGTH_SHORT).show();
 
+                        Intent intent = new Intent(LoginActivity.this, DashBoardActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }
                 } else {
-                    Toast.makeText(LoginActivity.this, userLoginResponse.getMessage(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(LoginActivity.this, userLoginResponse.getMessage(), Toast.LENGTH_SHORT).show();
                 }
             }
 
