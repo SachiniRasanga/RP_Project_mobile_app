@@ -10,16 +10,16 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/my_primary"
-        android:alpha="0.6"/>
+        android:alpha="0.6"
+        android:background="@color/my_primary" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        app:cardCornerRadius="58dp"
+        android:layout_marginBottom="-20dp"
 
-        android:layout_marginBottom="-20dp">
+        app:cardCornerRadius="28dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -33,145 +33,150 @@
                 android:text="REGISTER"
                 android:textColor="@color/my_primary"
                 android:textSize="32sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text= "Please Create a new Account"
+                android:text="Please Create a new Account"
 
-                android:textSize="15dp"/>
+                android:textSize="15dp" />
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="30dp"/>
+                android:layout_height="30dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text= "First Name"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                android:alpha="0.8"/>
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                android:id="@+id/firstName"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text= "Last Name"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                android:alpha="0.8"/>
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                android:id="@+id/lastName"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text= "User Name"
-                android:textSize="20dp"
-                android:textStyle="bold"
                 android:alpha="0.8"
-                />
+                android:text="First Name"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
             <EditText
+                android:id="@+id/firstName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.8"
+                android:text="Last Name"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/lastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.8"
+                android:text="User Name"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <EditText
                 android:id="@+id/userName"
-                />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text= "Mobile Number"
+                android:alpha="0.8"
+                android:text="Mobile Number"
                 android:textSize="20dp"
-                android:textStyle="bold"
-                android:alpha="0.8"/>
+                android:textStyle="bold" />
+
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number"
                 android:id="@+id/mobileNo"
-                />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text= "NIC Number"
+                android:alpha="0.8"
+                android:text="NIC Number"
                 android:textSize="20dp"
-                android:textStyle="bold"
-                android:alpha="0.8"/>
+                android:textStyle="bold" />
+
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text"
                 android:id="@+id/NIC"
-                />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text= "Email"
+                android:alpha="0.8"
+                android:text="Email"
                 android:textSize="20dp"
-                android:textStyle="bold"
-                android:alpha="0.8"/>
+                android:textStyle="bold" />
+
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                android:drawableEnd="@drawable/baseline_email_24"
                 android:id="@+id/email"
-                />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/baseline_email_24"
+                android:inputType="textEmailAddress" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text= "Password"
+                android:alpha="0.8"
+                android:text="Password"
                 android:textSize="20dp"
-                android:textStyle="bold"
-                android:alpha="0.8"/>
+                android:textStyle="bold" />
+
             <EditText
+                android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"
                 android:drawableEnd="@drawable/baseline_remove_red_eye_24"
-                android:id="@+id/password"
-                />
+                android:inputType="textPassword" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.8"
+                android:text="User Type"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
+            <EditText
+                android:id="@+id/userType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
 
             <View
                 android:layout_width="wrap_content"
-                android:layout_height="10dp"/>
+                android:layout_height="10dp" />
+
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/registerBtn"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
+                android:background="@drawable/button_selector"
                 android:text="REGISTER"
                 android:textColor="@color/white"
                 android:textSize="18dp"
-                android:background="@drawable/button_selector"
-                android:id="@+id/registerBtn"
                 app:cornerRadius="32dp">
 
             </com.google.android.material.button.MaterialButton>
 
-
-
-
-
-
         </LinearLayout>
-
-
     </androidx.cardview.widget.CardView>
-
-
-
 
 </RelativeLayout>

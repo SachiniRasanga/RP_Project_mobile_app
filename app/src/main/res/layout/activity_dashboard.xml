@@ -81,13 +81,13 @@
                     android:layout_marginTop="20dp"
                     android:layout_height="80dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/profile" />
+                    android:background="@drawable/baseline_add_home_24" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:text="Profile"
+                    android:text="Home"
                     android:textSize="17dp"
                     android:textStyle="bold" />
 
@@ -122,7 +122,7 @@
                     android:layout_height="80dp"
                     android:layout_marginTop="20dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/logout" />
+                    android:background="@drawable/baseline_lock_reset_24" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -163,7 +163,7 @@
                     android:layout_height="80dp"
                     android:layout_gravity="center"
 android:layout_marginTop="20dp"
-                    android:background="@drawable/plant" />
+                    android:background="@drawable/baseline_add_home_24" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -203,7 +203,7 @@ android:layout_marginTop="20dp"
                     android:layout_height="80dp"
                     android:layout_marginTop="20dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/prescription" />
+                    android:background="@drawable/baseline_add_home_24" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -243,7 +243,7 @@ android:layout_marginTop="20dp"
                     android:layout_height="80dp"
                     android:layout_marginTop="20dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/disease" />
+                    android:background="@drawable/baseline_add_home_24" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -283,7 +283,7 @@ android:layout_marginTop="20dp"
                     android:layout_height="80dp"
                     android:layout_marginTop="20dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/nila" />
+                    android:background="@drawable/baseline_add_home_24" />
 
                 <TextView
                     android:layout_width="wrap_content"

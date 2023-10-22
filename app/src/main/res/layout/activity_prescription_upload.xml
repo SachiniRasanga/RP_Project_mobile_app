@@ -38,50 +38,38 @@
         android:textColor="#F6F2F2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp" />
-    <ImageView
-        android:id="@+id/image"
-        android:layout_width="300dp"
-        android:layout_marginTop="220dp"
-        android:layout_marginLeft="55dp"
-        android:background="@color/white"
-        android:layout_height="300dp"/>
 
 <TextView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:text="Please Upload your Prescription"
-    android:layout_marginTop="540dp"
+    android:layout_marginTop="320dp"
     android:textSize="20dp"
-    android:layout_marginRight="40dp"
-
     android:textStyle="bold"
 
-    android:layout_marginLeft="60dp"
+    android:layout_marginLeft="50dp"
 
     android:textColor="@color/black"/>
-
     <androidx.cardview.widget.CardView
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginLeft="145dp"
-        android:layout_marginTop="600dp"
-        app:cardCornerRadius="40dp">
+        android:layout_marginTop="400dp"
+        app:cardCornerRadius="40dp"
+        android:layout_marginLeft="130dp">
 
 
         <LinearLayout
-            android:layout_width="157dp"
-            android:layout_height="147dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_gravity="center"
             android:orientation="vertical">
 
-            <Button
-                android:id="@+id/button"
+            <ImageView
                 android:layout_width="100dp"
+                android:layout_marginTop="20dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/cam"
-                tools:ignore="InvalidId" />
+                android:background="@drawable/cam" />
 
             <TextView
                 android:layout_width="wrap_content"
