@@ -17,49 +17,57 @@
 
 
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/profile_fullname_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="285dp"
-            android:layout_marginEnd="42dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="291dp"
+            android:layout_marginEnd="41dp"
+            android:layout_marginBottom="487dp"
             android:ems="10"
             android:inputType="text"
             android:text="Name" />
 
         <EditText
-            android:id="@+id/editTextText2"
+            android:id="@+id/profile_email_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="329dp"
-            android:layout_marginEnd="81dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="351dp"
+            android:layout_marginEnd="44dp"
+            android:layout_marginBottom="427dp"
             android:ems="10"
             android:inputType="text"
             android:text="Name" />
 
         <EditText
-            android:id="@+id/editTextText3"
+            android:id="@+id/profile_mobilenumber_text"
             android:layout_width="171dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="367dp"
-            android:layout_marginEnd="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="409dp"
+            android:layout_marginEnd="37dp"
+            android:layout_marginBottom="369dp"
             android:ems="10"
             android:inputType="text"
             android:text="Name" />
 
         <EditText
-            android:id="@+id/editTextText4"
+            android:id="@+id/profile_usertype_text"
             android:layout_width="181dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="412dp"
-            android:layout_marginEnd="70dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="477dp"
+            android:layout_marginEnd="67dp"
+            android:layout_marginBottom="301dp"
             android:ems="10"
             android:inputType="text"
             android:text="Name" />
@@ -71,11 +79,11 @@
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="160dp"
-
         android:layout_alignTop="@+id/textViewTitle"
-
         android:layout_alignBottom="@+id/textViewTitle"
         android:layout_marginTop="-60dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
         android:layout_marginBottom="-62dp"
         android:background="@drawable/background_view1"
         tools:ignore="InvalidId" />
@@ -86,19 +94,28 @@
         android:layout_height="wrap_content"
         android:text="PROFILE"
         android:textStyle="bold"
-
         android:textSize="28sp"
         android:textColor="#F6F2F2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/image"
-        android:layout_width="350dp"
-        android:layout_marginTop="220dp"
+        android:layout_width="wrap_content"
+        android:layout_height="268dp"
+        android:layout_below="@+id/view"
+        app:cardCornerRadius="65dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="35dp"
         android:layout_marginLeft="35dp"
-        android:padding="40dp"
+        android:layout_marginTop="123dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="273dp"
         android:background="@color/my_secondary2"
-        android:layout_height="300dp">
+        android:padding="40dp">
 
 
         <TextView
@@ -114,55 +131,54 @@
         </TextView>
 
 
-
-
         <TextView
+            android:id="@+id/profile_fullname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:textSize="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="80dp"
-
-            android:text="Full Name:">
-
+            android:text="Full Name:"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold">
 
 
         </TextView>
 
 
         <TextView
+            android:id="@+id/profile_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:textSize="20dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="120dp"
-            android:text="Email:"></TextView>
+            android:layout_marginTop="140dp"
+            android:text="Email:"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"></TextView>
 
         <TextView
+            android:id="@+id/profile_mobilenumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="160dp"
-            android:text="Mobile Number:"></TextView>
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:textSize="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="200dp"
-            android:text="Address:"></TextView>
+            android:text="Mobile Number:"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"></TextView>
 
+
+        <TextView
+            android:id="@+id/profile_usertype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="260dp"
+            android:text="UserType:"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"></TextView>
 
 
     </androidx.cardview.widget.CardView>
