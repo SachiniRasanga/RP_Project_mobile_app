@@ -5,44 +5,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".LoginActivity">
-
+    tools:context=".RecommendedDoctorDetailsActivity">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:alpha="0.2"
-        android:background="@color/my_primary"/>
+        android:background="@color/my_primary" />
 
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="160dp"
-        android:layout_alignTop="@+id/textViewTitle"
-        android:layout_alignBottom="@+id/textViewTitle"
-        android:layout_marginTop="-60dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginBottom="-62dp"
         android:background="@drawable/background_view1"
-        tools:ignore="InvalidId" />
-
+        tools:ignore="InvalidId"/>
     <TextView
         android:id="@+id/textViewTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="PROFILE"
+        android:text="Disease Identify"
         android:textStyle="bold"
         android:textSize="28sp"
         android:textColor="#F6F2F2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp" />
 
+
     <androidx.cardview.widget.CardView
         android:id="@+id/image"
         android:layout_width="wrap_content"
-        android:layout_height="300dp"
+        android:layout_height="match_parent"
         android:layout_below="@+id/view"
         app:cardCornerRadius="65dp"
         android:layout_alignParentStart="true"
@@ -50,10 +41,10 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="35dp"
         android:layout_marginLeft="35dp"
-        android:layout_marginTop="123dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="35dp"
         android:layout_marginRight="35dp"
-        android:layout_marginBottom="200dp"
+        android:layout_marginBottom="30dp"
         android:background="@color/my_secondary2"
         android:padding="10dp"
         tools:ignore="UnknownIdInLayout">
@@ -61,10 +52,10 @@
         <TextView
             android:layout_width="214dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="85dp"
+            android:layout_marginLeft="65dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
-            android:text="User Details"
+            android:text="Doctor Details"
             android:textColor="@color/black"
             android:textSize="30dp"
             android:textStyle="bold"></TextView>
@@ -77,7 +68,7 @@
             android:orientation="horizontal"
             android:layout_marginTop="100dp">
             <TextView
-                android:id="@+id/profile_fullname"
+                android:id="@+id/doctor_fullname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Full Name:  "
@@ -86,10 +77,35 @@
                 android:textStyle="bold">
             </TextView>
             <TextView
-                android:id="@+id/profile_fullname_text"
+                android:id="@+id/doctor_fullname_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sachini Rasanga"
+                android:textFontWeight="@integer/material_motion_duration_long_1"
+                android:textColor="@color/my_secondary4"
+                android:textSize="15dp">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="150dp">
+            <TextView
+                android:id="@+id/doctor_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Doctor Type:  "
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold">
+            </TextView>
+            <TextView
+                android:id="@+id/doctor_type_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:textFontWeight="@integer/material_motion_duration_long_1"
                 android:textColor="@color/my_secondary4"
                 android:textSize="15dp">
@@ -102,9 +118,9 @@
             android:orientation="horizontal"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
-            android:layout_marginTop="150dp">
+            android:layout_marginTop="200dp">
             <TextView
-                android:id="@+id/profile_email"
+                android:id="@+id/doctor_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Email:  "
@@ -114,10 +130,9 @@
             </TextView>
 
             <TextView
-                android:id="@+id/profile_email_text"
+                android:id="@+id/doctor_email_text"
                 android:layout_width="wrap_content"
                 android:layout_height="29dp"
-                android:text="sachinirasanga98@gmail.com "
                 android:textColor="@color/my_secondary4"
                 android:textFontWeight="@integer/material_motion_duration_long_1"
                 android:textSize="15dp"
@@ -131,9 +146,9 @@
             android:orientation="horizontal"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
-            android:layout_marginTop="200dp">
+            android:layout_marginTop="250dp">
             <TextView
-                android:id="@+id/profile_mobilenumber"
+                android:id="@+id/doctor_mobilenumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Mobile No: "
@@ -142,10 +157,9 @@
                 android:textStyle="bold">
             </TextView>
             <TextView
-                android:id="@+id/profile_mobilenumber_text"
+                android:id="@+id/doctor_mobilenumber_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0711992026"
                 android:textFontWeight="@integer/material_motion_duration_long_1"
                 android:textColor="@color/my_secondary4"
                 android:textSize="15dp">
@@ -158,32 +172,70 @@
             android:orientation="horizontal"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
-            android:layout_marginTop="250dp">
+            android:layout_marginTop="300dp">
             <TextView
-                android:id="@+id/profile_usertype"
+                android:id="@+id/doctor_mobileno"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="User Type: "
+                android:text="Adddress: "
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold">
+            </TextView>
+
+            <TextView
+                android:id="@+id/doctor_mobileno_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/my_secondary4"
+                android:textFontWeight="@integer/material_motion_duration_long_1"
+                android:textSize="15dp"
+                tools:ignore="DuplicateIds"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="350dp">
+            <TextView
+                android:id="@+id/doctor_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description: "
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 android:textStyle="bold">
             </TextView>
             <TextView
-                android:id="@+id/profile_usertype_text"
+                android:id="@+id/doctor_description_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Patient"
                 android:textFontWeight="@integer/material_motion_duration_long_1"
                 android:textColor="@color/my_secondary4"
                 android:textSize="15dp"
                 tools:ignore="DuplicateIds">
             </TextView>
         </LinearLayout>
+        <TextView
+            android:layout_width="214dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="65dp"
+            android:layout_marginTop="500dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="Thank You! Welcome"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"></TextView>
+
+
 
 
 
     </androidx.cardview.widget.CardView>
-
 
 
 </RelativeLayout>

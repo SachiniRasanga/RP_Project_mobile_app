@@ -11,7 +11,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:alpha="0.6"
+        android:alpha="0.2"
         android:background="@color/my_primary" />
 
     <androidx.cardview.widget.CardView
@@ -71,7 +71,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/cancel_button_selector"
+                android:background="@drawable/cancelbutton"
                 android:text="CANCEL"
                 android:textColor="@color/white"
                 android:textSize="18dp"

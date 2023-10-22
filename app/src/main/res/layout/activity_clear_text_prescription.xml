@@ -4,15 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
-    tools:context=".LoginActivity">
+    tools:context=".ClearTextPrescriptionActivity"
+    android:background="@drawable/background">
+
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:alpha="0.6"
+        android:alpha="0.2"
         android:background="@color/my_primary">
 
 
@@ -57,7 +58,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginLeft="170dp"
+        android:layout_marginLeft="160dp"
         android:layout_marginTop="630dp"
         app:cardCornerRadius="40dp">
 
@@ -86,7 +87,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginLeft="80dp"
+        android:layout_marginLeft="70dp"
         android:layout_marginTop="630dp"
         app:cardCornerRadius="40dp">
 
@@ -115,7 +116,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginLeft="260dp"
+        android:layout_marginLeft="250dp"
         android:layout_marginTop="630dp"
         app:cardCornerRadius="40dp">
 
@@ -141,10 +142,5 @@
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-
-
-
-
-
 
 </RelativeLayout>

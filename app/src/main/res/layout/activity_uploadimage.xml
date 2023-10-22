@@ -13,8 +13,8 @@
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:alpha="0.6"
-        android:background="@color/my_primary">
+        android:alpha="0.2"
+        android:background="@color/my_primary"/>
 
 
         <ImageView
@@ -25,11 +25,11 @@
             android:layout_alignParentEnd="true"
             android:layout_marginStart="55dp"
             android:layout_marginLeft="55dp"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="180dp"
             android:layout_marginEnd="56dp"
             android:layout_marginBottom="10dp"
-            android:background="@color/my_secondary2" />
-    </RelativeLayout>
+             />
+
 
     <View
         android:id="@+id/view"
@@ -57,8 +57,8 @@
     <androidx.cardview.widget.CardView
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginLeft="165dp"
-        android:layout_marginTop="520dp"
+        android:layout_marginLeft="155dp"
+        android:layout_marginTop="500dp"
         app:cardCornerRadius="40dp">
 
 
@@ -87,7 +87,7 @@
             android:layout_height="60dp"
             android:text="CONFIRM"
             android:textColor="@color/white"
-            android:layout_marginTop="620dp"
+            android:layout_marginTop="600dp"
             android:layout_marginStart="40dp"
             android:layout_marginEnd="40dp"
             android:textSize="18dp"
@@ -96,22 +96,23 @@
 
         </com.google.android.material.button.MaterialButton>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/cancel_button"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="700dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginBottom="63dp"
-            android:background="@drawable/cancel_button_selector"
-            android:text="CANCEL"
-            android:textColor="@color/white"
-            android:textSize="18dp"
-            app:cornerRadius="32dp">
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/cancel_button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="600dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/cancel_button_selector"
+        android:text="CANCEL"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:cornerRadius="32dp">
 
-        </com.google.android.material.button.MaterialButton>
+    </com.google.android.material.button.MaterialButton>
     </RelativeLayout>
 
 
