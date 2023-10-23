@@ -26,9 +26,6 @@
             android:name=".DashBoardActivity"
             android:exported="true" />
         <activity
-            android:name=".KnowledgebaseActivity"
-            android:exported="true" />
-        <activity
             android:name=".ProfileActivity"
             android:exported="true" />
         <activity
@@ -41,7 +38,23 @@
             android:name=".PopupActivity"
             android:exported="true" />
         <activity
+            android:name=".ClearTextPrescriptionActivity"
+            android:exported="true" />
+        <activity
             android:name=".DiseaseMainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".KnowledgebaseActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RecommendedDoctorDetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".VoiceChatsActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -12,24 +12,25 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:alpha="0.2"
-        android:background="@color/my_primary"/>
+        android:background="@color/my_primary" />
 
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="160dp"
         android:background="@drawable/background_view1"
-        tools:ignore="InvalidId"/>
+        tools:ignore="InvalidId" />
+
     <TextView
         android:id="@+id/textViewTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Disease Identify"
-        android:textStyle="bold"
-        android:textSize="28sp"
-        android:textColor="#F6F2F2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp" />
+        android:layout_marginTop="60dp"
+        android:text="Disease Identify"
+        android:textColor="#F6F2F2"
+        android:textSize="28sp"
+        android:textStyle="bold" />
 
     <GridLayout
         android:id="@+id/grid1"
@@ -45,6 +46,7 @@
         android:rowCount="3">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/disease_identify_voice_chat_btn"
             android:layout_width="170dp"
             android:layout_height="170dp"
             android:layout_row="0"
@@ -56,7 +58,6 @@
             app:cardElevation="12dp">
 
             <LinearLayout
-                android:id="@+id/profileDashboardBtn"
                 android:layout_width="220dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
@@ -73,10 +74,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:text="VOICE CHAT "
-                    android:textSize="17dp"
                     android:layout_marginTop="10dp"
+                    android:text="VOICE CHAT "
                     android:textColor="@color/my_secondary4"
+                    android:textSize="17dp"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -84,6 +85,7 @@
 
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/disease_identify_find_doctor_btn"
             android:layout_width="170dp"
             android:layout_height="170dp"
             android:layout_row="1"
@@ -95,7 +97,6 @@
             app:cardElevation="12dp">
 
             <LinearLayout
-                android:id="@+id/plantIdentifyDashboardBtn"
                 android:layout_width="220dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
@@ -112,9 +113,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
                     android:text="FIND A DOCTOR"
                     android:textColor="@color/my_secondary4"
-                    android:layout_marginTop="10dp"
                     android:textSize="17dp"
                     android:textStyle="bold" />
 
@@ -122,13 +123,8 @@
 
         </androidx.cardview.widget.CardView>
 
-
-
-
-
-
-
         <androidx.cardview.widget.CardView
+            android:id="@+id/disease_identify_knowledge_base_btn"
             android:layout_width="170dp"
             android:layout_height="170dp"
             android:layout_row="2"
@@ -140,7 +136,6 @@
             app:cardElevation="12dp">
 
             <LinearLayout
-                android:id="@+id/pressurePointDashboardBtn"
                 android:layout_width="220dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
@@ -157,10 +152,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:text="KNOWLEDGEBASE "
-                    android:textSize="17dp"
                     android:layout_marginTop="10dp"
+                    android:text="KNOWLEDGEBASE "
                     android:textColor="@color/my_secondary4"
+                    android:textSize="17dp"
                     android:textStyle="bold" />
             </LinearLayout>
 
