@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/dialogbg"
+    android:id="@+id/bottomsheeltlayout"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="28dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="UPLOAD IMAGE"
+            android:textColor="@color/my_secondary"
+            android:textSize="23dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose a Prescription"
+            android:id="@+id/choose"
+            android:textColor="@color/my_secondary4"
+            android:textSize="20dp"
+            android:textStyle="bold"
+             />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="10dp" />
+
+        <Button
+            android:id="@+id/chooseFromGalleryBtn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/button_selector"
+            android:text="CHOOSE FROM GALLARY"
+            android:textColor="@color/white"
+            android:textSize="18dp">
+
+        </Button>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancelBtn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/cancelbutton"
+            android:text="CANCEL"
+            android:textColor="@color/white"
+            android:textSize="18dp">
+
+        </com.google.android.material.button.MaterialButton>
+
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="10dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
