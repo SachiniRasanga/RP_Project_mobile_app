@@ -53,6 +53,9 @@
             android:name=".VoiceChatsActivity"
             android:exported="true" />
         <activity
+            android:name=".RecommendedDoctorActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
