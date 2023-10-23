@@ -63,36 +63,38 @@
             android:layout_width="214dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="55dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="40dp"
             android:layout_marginRight="20dp"
             android:text="Disease Details"
             android:textColor="@color/black"
             android:textSize="30dp"
             android:textStyle="bold"></TextView>
-        <TextView
-            android:id="@+id/disease_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Disease Name:  "
-            android:layout_marginTop="100dp"
-            android:layout_marginStart="20dp"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            android:textStyle="bold">
-        </TextView>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
             android:orientation="horizontal"
-            android:layout_marginTop="140dp">
+            android:layout_marginTop="100dp">
+
+            <TextView
+                android:id="@+id/disease_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Disease Name:  "
+
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold">
+            </TextView>
 
             <TextView
                 android:id="@+id/disease_name_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textFontWeight="@integer/material_motion_duration_long_1"
+                android:text="Headache"
                 android:textColor="@color/my_secondary4"
                 android:textSize="15dp">
             </TextView>
@@ -104,8 +106,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Recommended Doctor:  "
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="200dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="140dp"
             android:textColor="@color/black"
             android:textSize="20dp"
             android:textStyle="bold">
@@ -117,17 +119,19 @@
             android:orientation="horizontal"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
-            android:layout_marginTop="250dp">
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="170dp">
 
 
             <TextView
                 android:id="@+id/doctor_type_text"
                 android:layout_width="wrap_content"
-                android:layout_height="29dp"
-
+                android:layout_height="80dp"
+                android:layout_marginBottom="10dp"
                 android:textColor="@color/my_secondary4"
                 android:textFontWeight="@integer/material_motion_duration_long_1"
                 android:textSize="15dp"
+                android:text="According To your symptomes I Recommend Dr. Type 1 I  Bla Bla Blaaaaaaaaaaaaaaaaa"
                 tools:ignore="DuplicateIds"></TextView>
         </LinearLayout>
 
