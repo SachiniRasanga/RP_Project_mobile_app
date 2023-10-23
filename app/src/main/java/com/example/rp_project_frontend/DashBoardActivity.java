@@ -66,5 +66,10 @@ public class DashBoardActivity extends AppCompatActivity {
             Intent prescriptionReadIntent = new Intent(DashBoardActivity.this, PrescriptionUploadActivity.class);
             startActivity(prescriptionReadIntent);
         });
+
+        diseaseIdentifyDashboardBtn.setOnClickListener(view -> {
+            Intent diseaseIdentifyIntent = new Intent(DashBoardActivity.this, DiseaseMainActivity.class);
+            startActivity(diseaseIdentifyIntent);
+        });
     }
 }
