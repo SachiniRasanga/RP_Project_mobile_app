@@ -52,7 +52,6 @@
         <activity
             android:name=".VoiceChatsActivity"
             android:exported="true" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true">
