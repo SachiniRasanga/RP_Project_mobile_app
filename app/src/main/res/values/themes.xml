@@ -8,9 +8,9 @@
 
 
         <item name="colorSecondary">@color/my_secondary1</item>
-        <item name="colorSecondaryVariant">@color/my_secondary</item>
+        <item name="colorSecondaryVariant">#8EDDAF</item>
         <item name="colorOnSecondary" >@color/black</item>
-        <item name="android:statusBarColor">#4CB550</item>
+        <item name="android:statusBarColor">@color/my_secondary1</item>
 
 
 
