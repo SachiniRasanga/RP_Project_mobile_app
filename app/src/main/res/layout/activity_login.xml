@@ -140,22 +140,22 @@
                     android:layout_margin="12dp" />
 
                 <ImageView
-                    android:layout_width="40dp"
+                    android:layout_width="70dp"
                     android:layout_height="40dp"
                     android:layout_margin="12dp"
-                    android:background="@drawable/f" />
+                    android:background="@drawable/fb" />
 
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_margin="12dp"
-                    android:background="@drawable/github" />
+                    android:background="@drawable/hub" />
 
                 <ImageView
-                    android:layout_width="50dp"
+                    android:layout_width="70dp"
                     android:layout_height="40dp"
                     android:layout_margin="12dp"
-                    android:background="@drawable/google" />
+                    android:background="@drawable/chrome" />
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
