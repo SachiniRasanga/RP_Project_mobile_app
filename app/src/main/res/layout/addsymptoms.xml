@@ -2,9 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingTop="10dp"
+    android:paddingTop="5dp"
     android:orientation="horizontal"
-    android:paddingBottom="10dp">
+    android:paddingBottom="5dp">
 
    <LinearLayout
        android:layout_width="wrap_content"
@@ -15,7 +15,7 @@
     <EditText
         android:id="@+id/edit_symptomsname"
         android:layout_width="280dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:hint="Symptoms"
         android:textColor="@color/black"
         android:textAlignment="center"
@@ -27,7 +27,7 @@
         android:id="@+id/cancel"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/baseline_cancel_24"
