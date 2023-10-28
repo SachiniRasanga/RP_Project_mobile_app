@@ -14,10 +14,87 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:alpha="0.2"
-        android:background="@color/my_primary">
+        android:background="@color/my_primary"/>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_alignTop="@+id/textViewTitle"
+            android:layout_alignBottom="@+id/textViewTitle"
+            android:layout_marginTop="-60dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="-62dp"
+            android:background="@drawable/background_view1"
+            tools:ignore="InvalidId" />
+
+    <TextView
+        android:id="@+id/textViewTitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prescription Reading"
+        android:textStyle="bold"
+        android:textSize="28sp"
+        android:textColor="#F6F2F2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp" />
 
 
-    </RelativeLayout>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/clear_text_card"
+        android:layout_width="wrap_content"
+        android:layout_height="391dp"
+        android:layout_below="@+id/view1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="102dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="233dp"
+        android:background="@color/my_secondary2"
+        android:padding="10dp"
+        app:cardCornerRadius="65dp"
+        tools:ignore="UnknownIdInLayout">
+
+        <TextView
+            android:layout_width="265dp"
+            android:layout_height="58dp"
+
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="20dp"
+            android:text="Prescription Details"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold"></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/clear_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textFontWeight="@integer/material_motion_duration_long_1"
+                android:textSize="15dp"></TextView>
+        </LinearLayout>
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
 
     <View
         android:id="@+id/view"
@@ -41,21 +118,6 @@
         android:layout_marginTop="60dp" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/image"
-        android:layout_width="300dp"
-        android:layout_height="400dp"
-        android:layout_below="@+id/view"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="55dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginBottom="203dp"
-        android:background="@color/my_secondary2"
-        app:cardCornerRadius="40dp" />
-    <androidx.cardview.widget.CardView
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginLeft="160dp"
@@ -70,7 +132,7 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/button1"
+                android:id="@+id/rotatebtn"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
@@ -99,7 +161,7 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/downloadbutton"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
@@ -128,7 +190,7 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/soundbutton"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
@@ -142,5 +204,4 @@
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-
 </RelativeLayout>

@@ -1,7 +1,6 @@
 package com.example.rp_project_frontend;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -15,13 +14,11 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
 
 import com.example.rp_project_frontend.Model.TextIdentifyResponseDto;
 import com.example.rp_project_frontend.Retrofit.MLRetrofitClient;
 
 import java.io.ByteArrayOutputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -34,17 +31,21 @@ import retrofit2.Response;
 public class UploadImageActivity extends AppCompatActivity {
 
     ImageView uploadImageView;
-    AppCompatButton confirmBtn;
+    Button confirmBtn;
+    Button rotateButton;
 
     @SuppressLint("WrongThread")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        Logger logger = Logger.getLogger("Upload Image Activity");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_uploadimage);
 
+        Logger logger = Logger.getLogger("Upload Image Activity");
+
         uploadImageView = findViewById(R.id.presImageView);
         confirmBtn = findViewById(R.id.upload_image_confirm_button);
+
+        rotateButton = findViewById(R.id.rotatebutton);
 
         Intent intent = getIntent();
         Uri image = Uri.parse(intent.getStringExtra("image"));
@@ -105,6 +106,14 @@ public class UploadImageActivity extends AppCompatActivity {
                 }
             });
         });
+
+        rotateButton.setOnClickListener(view -> rotateImage());
     }
 
+    private void rotateImage() {
+
+        float currentRotation = uploadImageView.getRotation();
+        currentRotation += 90;
+        uploadImageView.setRotation(currentRotation);
+    }
 }

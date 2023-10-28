@@ -2,27 +2,31 @@ package com.example.rp_project_frontend;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ClearTextPrescriptionActivity extends AppCompatActivity {
 
-    CardView clearTextDisplaySpace;
+    TextView clearTextDisplaySpace;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_clear_text_prescription);
 
-        clearTextDisplaySpace = findViewById(R.id.clear_text_display_space);
+        clearTextDisplaySpace = findViewById(R.id.clear_text_view);
 
         Intent uploadImageIntent = getIntent();
         ArrayList<String> predicted_class = uploadImageIntent.getStringArrayListExtra("predicted_class");
-        clearTextDisplaySpace.setActivated(true);
-        clearTextDisplaySpace.setTooltipText(predicted_class.get(0));
+
+        String identifiedText = "";
+        for (String s : predicted_class) {
+            identifiedText = identifiedText + "\n" + s;
+        }
+
+        clearTextDisplaySpace.setText(identifiedText);
     }
 }
