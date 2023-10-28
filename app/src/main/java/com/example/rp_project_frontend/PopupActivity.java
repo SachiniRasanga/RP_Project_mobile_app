@@ -10,10 +10,11 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 public class PopupActivity extends AppCompatActivity {
 
-    Button chooseFromGalleryBtn, cancelBtn;
+    AppCompatButton chooseFromGalleryBtn, cancelBtn;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
