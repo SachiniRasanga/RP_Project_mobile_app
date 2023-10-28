@@ -203,7 +203,7 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/button1"
+                android:id="@+id/rotatebtn"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
@@ -232,7 +232,7 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/downloadbutton"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
@@ -261,7 +261,7 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/soundbutton"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
