@@ -1,5 +1,6 @@
 package com.example.rp_project_frontend;
 
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -71,5 +72,25 @@ public class DashBoardActivity extends AppCompatActivity {
             Intent diseaseIdentifyIntent = new Intent(DashBoardActivity.this, DiseaseMainActivity.class);
             startActivity(diseaseIdentifyIntent);
         });
+
+        pressurePointDashboardBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openApp();
+            }
+        });
+    }
+
+    private void openApp() {
+        try {
+            Intent launchIntent = getPackageManager().getLaunchIntentForPackage("com.DefaultCompany.HelaNilaWedakama");
+            if (launchIntent != null) {
+                startActivity(launchIntent);
+            } else {
+                Toast.makeText(DashBoardActivity.this, "There is no package available in android", Toast.LENGTH_LONG).show();
+            }
+        } catch (ActivityNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }

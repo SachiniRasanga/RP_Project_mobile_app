@@ -2,6 +2,7 @@ package com.example.rp_project_frontend;
 
 import android.annotation.SuppressLint;
 import android.content.ContextWrapper;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.media.AudioFormat;
 import android.media.AudioRecord;
@@ -15,10 +16,13 @@ import android.os.Handler;
 import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import com.example.rp_project_frontend.Model.DiseaseIdentifyRequestDto;
+import com.example.rp_project_frontend.Model.DiseaseIdentifyResponseDto;
 import com.example.rp_project_frontend.Model.DiseaseVoiceToTextRequestDto;
 import com.example.rp_project_frontend.Model.DiseaseVoiceToTextResponseDto;
 import com.example.rp_project_frontend.Retrofit.MLRetrofitClient;
@@ -91,32 +95,6 @@ public class VoiceChatsActivity extends AppCompatActivity {
         voiceRecordBtn.setOnClickListener(v -> {
             recordVoice();
         });
-
-//        DiseaseIdentifyRequestDto diseaseIdentifyRequestDto = new DiseaseIdentifyRequestDto("");
-//        Call<DiseaseIdentifyResponseDto> call2 = MLRetrofitClient
-//                .getInstance()
-//                .getDiseaseIdentifyEndpoint()
-//                .predictDisease(diseaseIdentifyRequestDto);
-//
-//        call2.enqueue(new Callback<DiseaseIdentifyResponseDto>() {
-//            @Override
-//            public void onResponse(Call<DiseaseIdentifyResponseDto> call, Response<DiseaseIdentifyResponseDto> response) {
-//                if (response.isSuccessful()) {
-//                    if (response.body().getStatus().equals("200")) {
-//                        logger.info("Disease List: " + response.body().getResponse());
-//                    } else {
-//                        Toast.makeText(VoiceChatsActivity.this, "Error: " + response.body().getResponse(), Toast.LENGTH_SHORT).show();
-//                    }
-//                } else {
-//                    Toast.makeText(VoiceChatsActivity.this, "Error: " + response.errorBody(), Toast.LENGTH_SHORT).show();
-//                }
-//            }
-//
-//            @Override
-//            public void onFailure(Call<DiseaseIdentifyResponseDto> call, Throwable t) {
-//                Toast.makeText(VoiceChatsActivity.this, "Error: " + t.getMessage(), Toast.LENGTH_SHORT).show();
-//            }
-//        });
     }
 
     public void recordVoice() {
@@ -162,14 +140,15 @@ public class VoiceChatsActivity extends AppCompatActivity {
                 @Override
                 public void onResponse(Call<DiseaseVoiceToTextResponseDto> call, Response<DiseaseVoiceToTextResponseDto> response) {
                     if (response.isSuccessful()) {
-                        if (response.message().equals("200")) {
-                            logger.info("Success: " + response.body().getResponse());
-                            Toast.makeText(VoiceChatsActivity.this, "Success: " + response.body().getResponse(), Toast.LENGTH_SHORT).show();
-                        } else {
-                            logger.warning("Error : " + response.body().getResponse());
-                        }
+                        logger.info("Success: " + response.body().getResponse());
+                        predictDisease(new DiseaseIdentifyRequestDto(response.body().getResponse()));
                     } else {
-                        logger.warning("Error: " + response.body().getResponse());
+                        logger.warning("Error : " + response.errorBody());
+                        AlertDialog.Builder builder = new AlertDialog.Builder(VoiceChatsActivity.this);
+                        builder.setTitle("Error");
+                        builder.setMessage(response.errorBody().toString());
+                        builder.setPositiveButton("OK", (dialog, which) -> dialog.dismiss());
+                        builder.show();
                     }
                 }
 
@@ -179,6 +158,7 @@ public class VoiceChatsActivity extends AppCompatActivity {
                 }
             });
         }
+
     }
 
     public static String convertAudioToBase64(String filePath) {
@@ -202,4 +182,34 @@ public class VoiceChatsActivity extends AppCompatActivity {
         return null;
     }
 
+    public void predictDisease(DiseaseIdentifyRequestDto diseaseIdentifyRequestDto) {
+
+        Call<DiseaseIdentifyResponseDto> call = MLRetrofitClient.getInstance().getDiseaseIdentifyEndpoint().predictDisease(diseaseIdentifyRequestDto);
+        call.enqueue(new Callback<DiseaseIdentifyResponseDto>() {
+            @Override
+            public void onResponse(Call<DiseaseIdentifyResponseDto> call, Response<DiseaseIdentifyResponseDto> response) {
+                if (response.isSuccessful()) {
+                    if (response.body().getStatus().equals("200")) {
+                        logger.info("Disease : " + response);
+                        logger.log(java.util.logging.Level.INFO, "Identified Disease : " + response.body().getResponse());
+
+                        Intent voiceChatIntent = new Intent(VoiceChatsActivity.this, DiseaseViewActivity.class);
+                        voiceChatIntent.putExtra("disease", response.body().getResponse().getDisease());
+                        voiceChatIntent.putExtra("doctor", response.body().getResponse().getDoctor());
+                        voiceChatIntent.putExtra("message", response.body().getResponse().getMessage());
+                        startActivity(voiceChatIntent);
+                    } else {
+                        Toast.makeText(VoiceChatsActivity.this, "Error: " + response.body().getStatus(), Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    Toast.makeText(VoiceChatsActivity.this, "Error: " + response.errorBody(), Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<DiseaseIdentifyResponseDto> call, Throwable t) {
+                Toast.makeText(VoiceChatsActivity.this, "Error: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
 }

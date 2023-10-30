@@ -1,6 +1,7 @@
 package com.example.rp_project_frontend.Model;
 
 public class Doctor {
+    private String _id;
     private String fullname;
     private String docType;
     private String email;
@@ -9,7 +10,7 @@ public class Doctor {
     private String specialization;
     private String description;
 
-    public Doctor(String fullname, String docType, String email, String mobileno, String address, String specialization, String description) {
+    public Doctor(String fullname, String docType, String email, String mobileno, String address, String specialization, String description, String _id) {
         this.fullname = fullname;
         this.docType = docType;
         this.email = email;
@@ -17,6 +18,7 @@ public class Doctor {
         this.address = address;
         this.specialization = specialization;
         this.description = description;
+        this._id = _id;
     }
 
     public String getFullname() {
@@ -73,5 +75,13 @@ public class Doctor {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public void setId(String _id) {
+        this._id = _id;
+    }
+
+    public String getId() {
+        return _id;
     }
 }

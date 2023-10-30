@@ -1,10 +1,10 @@
 package com.example.rp_project_frontend.Model;
 
-public class DiseaseIdentifyResponseDto {
-    private String status;
-    private DiseaseDetails response;
+public class KnowledgebaseUpdateResponseDto {
+    public String status;
+    private String response;
 
-    public DiseaseIdentifyResponseDto(String status, DiseaseDetails response) {
+    public KnowledgebaseUpdateResponseDto(String status, String response) {
         this.status = status;
         this.response = response;
     }
@@ -17,11 +17,11 @@ public class DiseaseIdentifyResponseDto {
         this.status = status;
     }
 
-    public DiseaseDetails getResponse() {
+    public String getResponse() {
         return response;
     }
 
-    public void setResponse(DiseaseDetails response) {
+    public void setResponse(String response) {
         this.response = response;
     }
 }
