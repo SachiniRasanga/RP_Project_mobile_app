@@ -57,6 +57,7 @@ public class DoctorListAdapter extends BaseAdapter {
 
         doctorViewBtn.setOnClickListener(view1 -> {
             Intent doctorDetailsIntent = new Intent(context, RecommendedDoctorDetailsActivity.class);
+            doctorDetailsIntent.putExtra("doctorId", doctor.getId());
             context.startActivity(doctorDetailsIntent);
         });
 

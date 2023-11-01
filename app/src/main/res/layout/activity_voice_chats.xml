@@ -30,19 +30,19 @@
 
         android:background="@drawable/background_view1"
 
-        tools:ignore="InvalidId"/>
+        tools:ignore="InvalidId" />
 
     <TextView
         android:id="@+id/textViewTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Disease Identify"
-        android:textStyle="bold"
-
-        android:textSize="28sp"
-        android:textColor="#F6F2F2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp" />
+        android:layout_marginTop="60dp"
+
+        android:text="Disease Identify"
+        android:textColor="#F6F2F2"
+        android:textSize="28sp"
+        android:textStyle="bold" />
 
 
     <TextView
@@ -76,7 +76,7 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/voiceRecordBtn"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"

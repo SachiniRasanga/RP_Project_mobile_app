@@ -75,7 +75,7 @@
         android:layout_marginTop="120dp"
         android:layout_marginStart="50dp">
 
-    <androidx.appcompat.widget.SearchView
+    <TextView
         android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

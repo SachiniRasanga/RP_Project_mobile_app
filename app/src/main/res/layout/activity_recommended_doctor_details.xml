@@ -174,7 +174,7 @@
             android:layout_marginEnd="30dp"
             android:layout_marginTop="300dp">
             <TextView
-                android:id="@+id/doctor_mobileno"
+                android:id="@+id/doctor_address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Adddress: "
@@ -184,12 +184,12 @@
             </TextView>
 
             <TextView
-                android:id="@+id/doctor_mobileno_text"
+                android:id="@+id/doctor_address_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/my_secondary4"
                 android:textFontWeight="@integer/material_motion_duration_long_1"
-                android:textSize="15dp"
+                android:textSize="13dp"
                 tools:ignore="DuplicateIds"></TextView>
         </LinearLayout>
 
@@ -215,7 +215,7 @@
                 android:layout_height="wrap_content"
                 android:textFontWeight="@integer/material_motion_duration_long_1"
                 android:textColor="@color/my_secondary4"
-                android:textSize="15dp"
+                android:textSize="13dp"
                 tools:ignore="DuplicateIds">
             </TextView>
         </LinearLayout>

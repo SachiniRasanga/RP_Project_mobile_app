@@ -1,6 +1,7 @@
 package com.example.rp_project_frontend.Retrofit;
 
 import com.example.rp_project_frontend.API.AuthEndpoints;
+import com.example.rp_project_frontend.API.DoctorEndpoints;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -27,6 +28,10 @@ public class RetrofitClient {
 
     public AuthEndpoints getEndpoint() {
         return retrofit.create(AuthEndpoints.class);
+    }
+
+    public DoctorEndpoints getDoctorEndpoint() {
+        return retrofit.create(DoctorEndpoints.class);
     }
 
 }

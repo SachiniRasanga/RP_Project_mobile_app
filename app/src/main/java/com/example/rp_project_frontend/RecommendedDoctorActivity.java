@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.SearchView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,6 +31,7 @@ public class RecommendedDoctorActivity extends AppCompatActivity {
     ImageView doctorImageView;
     ListView doctorListView;
     DoctorListAdapter doctorListAdapter;
+    TextView searchView;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -39,22 +42,36 @@ public class RecommendedDoctorActivity extends AppCompatActivity {
         doctorNameTextView = findViewById(R.id.doctor_name_view);
         doctorViewBtn = findViewById(R.id.doctor_view_eye_btn);
         doctorImageView = findViewById(R.id.doctor_image_view);
-
         doctorListView = findViewById(R.id.doctor_list_view);
-        doctorListAdapter = new DoctorListAdapter(this, new ArrayList<Doctor>());
+        searchView = findViewById(R.id.searchView);
+        Spinner doctorType = findViewById(R.id.doctor_spinner);
 
+        doctorListAdapter = new DoctorListAdapter(this, new ArrayList<Doctor>());
         doctorListView.setAdapter(doctorListAdapter);
 
         List<Doctor> doctorList = new ArrayList<>();
-        Doctor doctor1 = new Doctor("Doctor 1", "Ayurwedic", "testmail", "0717585960", "test", "test", "test");
-        Doctor doctor2 = new Doctor("Doctor 2", "Ayurwedic", "testmail", "0717585960", "test", "test", "test");
-        Doctor doctor3 = new Doctor("Doctor 3", "Ayurwedic", "testmail", "0717585960", "test", "test", "test");
 
-        doctorList.add(doctor1);
-        doctorList.add(doctor2);
-        doctorList.add(doctor3);
+//        String search = searchView.getText().toString();
+//        Integer docType = doctorType.getSelectedItemPosition();
 
-        doctorListAdapter.addAll(doctorList);
+        Call<List<Doctor>> call = RetrofitClient.getInstance().getDoctorEndpoint().getDoctorList("", "");
+        call.enqueue(new Callback<List<Doctor>>() {
+            @Override
+            public void onResponse(Call<List<Doctor>> call, Response<List<Doctor>> response) {
+                if (response.isSuccessful()) {
+                    doctorList.addAll(response.body());
+                    doctorListAdapter.notifyDataSetChanged();
+                    doctorListAdapter.addAll(doctorList);
+                } else {
+                    Toast.makeText(RecommendedDoctorActivity.this, "Error", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Doctor>> call, Throwable t) {
+                Toast.makeText(RecommendedDoctorActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 
