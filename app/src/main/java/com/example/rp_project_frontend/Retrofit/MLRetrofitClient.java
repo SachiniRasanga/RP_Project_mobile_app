@@ -11,7 +11,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MLRetrofitClient {
-    private static String BASE_URL = "http://192.168.1.100:8000";
+    private static String BASE_URL = "http://192.168.45.159:8000";
     private static MLRetrofitClient retrofitClient;
     private static Retrofit retrofit;
 
